@@ -1,10 +1,6 @@
-# test-data-generator
-Test Date Generator
+# Test Date Generator
 
-## Services Available
-- CsvBuilder
-
-## How to use
+## Example:
 ```
 Csv csv = new CsvBuilder(5)
         .column("UUID", () -> UUID.randomUUID().toString())
