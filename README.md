@@ -1,4 +1,4 @@
-# Test Date Generator
+# Test Data Generator
 
 ## Example:
 ```
