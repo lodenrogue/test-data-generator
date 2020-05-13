@@ -60,6 +60,8 @@ public class CsvBuilderTest {
         String str = csv.toString();
         assertNotNull(str);
         assertEquals(generateTestString(), str);
+
+        System.out.println(str);
     }
 
     private String generateTestString() {
