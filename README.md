@@ -11,7 +11,7 @@ Csv csv = new CsvBuilder(5)
 System.out.println(csv.toString());
 ```
 
-Output
+Output:
 ```
 FIRST_NAME, LAST_NAME, CUSTOM
 Erin, McDermott, 0.8823586
