@@ -18,7 +18,7 @@ public class AgeSupplierTest {
     public void should_returnAgeWithinRange_when_supplying() {
         int lowerBound = 10;
         int upperBound = 11;
-        
+
         int age = new AgeSupplier(lowerBound, upperBound).get();
         assertEquals(lowerBound, age);
     }
