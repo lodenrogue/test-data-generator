@@ -26,6 +26,12 @@ public class AddressSupplierTest {
     }
 
     @Test
+    public void should_returnState_when_supplying() {
+        String state = new StateSupplier().get();
+        assertNotNull(state);
+    }
+
+    @Test
     public void should_returnCountry_when_supplying() {
         String country = new CountrySupplier().get();
         assertNotNull(country);
