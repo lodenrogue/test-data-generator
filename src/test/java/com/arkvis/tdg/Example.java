@@ -2,8 +2,8 @@ package com.arkvis.tdg;
 
 import com.arkvis.tdg.generator.Csv;
 import com.arkvis.tdg.generator.CsvBuilder;
-import com.arkvis.tdg.supplier.FirstNameSupplier;
-import com.arkvis.tdg.supplier.LastNameSupplier;
+import com.arkvis.tdg.supplier.name.FirstNameSupplier;
+import com.arkvis.tdg.supplier.name.LastNameSupplier;
 
 import java.util.Random;
 

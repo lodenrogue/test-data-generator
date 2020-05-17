@@ -2,6 +2,8 @@ package com.arkvis.tdg.supplier;
 
 import com.arkvis.tdg.generator.Csv;
 import com.arkvis.tdg.generator.CsvBuilder;
+import com.arkvis.tdg.supplier.name.FirstNameSupplier;
+import com.arkvis.tdg.supplier.name.LastNameSupplier;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

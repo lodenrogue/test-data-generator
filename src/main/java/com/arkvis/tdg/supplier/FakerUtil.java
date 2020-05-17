@@ -2,7 +2,7 @@ package com.arkvis.tdg.supplier;
 
 import com.github.javafaker.Faker;
 
-class FakerUtil {
+public class FakerUtil {
 
     private static Faker faker;
 

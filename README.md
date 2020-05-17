@@ -1,5 +1,9 @@
 # Test Data Generator
 
+## Available Supplier Packages
+- Name
+- Address
+
 ## Example:
 ```
 Csv csv = new CsvBuilder(5)
