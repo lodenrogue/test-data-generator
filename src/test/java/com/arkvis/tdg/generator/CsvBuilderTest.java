@@ -8,19 +8,18 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 public class CsvBuilderTest {
-    private String columnAHeader = "COLUMN_A";
-    private String columnBHeader = "COLUMN_B";
+    private String columnAHeader = "STRING_COLUMN";
+    private String columnBHeader = "INT_COLUMN";
 
     private String columnAData = "ABC";
-    private String columnBData = "DEF";
-
+    private int columnBData = 123;
     private int rowCount = 10;
 
     @Test
     public void should_generateWithCorrectHeaders_when_generatingCsv() {
         Csv csv = new CsvBuilder(rowCount)
-                .column(columnAHeader, () -> "ABC")
-                .column(columnBHeader, () -> "DEF")
+                .column(columnAHeader, () -> columnAData)
+                .column(columnBHeader, () -> columnBData)
                 .build();
 
         assertNotNull(csv);
@@ -45,7 +44,7 @@ public class CsvBuilderTest {
 
         rows.forEach(row -> assertEquals(2, row.size()));
         rows.forEach(row -> assertEquals(columnAData, row.get(0)));
-        rows.forEach(row -> assertEquals(columnBData, row.get(1)));
+        rows.forEach(row -> assertEquals(String.valueOf(columnBData), row.get(1)));
     }
 
     @Test

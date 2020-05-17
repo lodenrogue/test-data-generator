@@ -5,7 +5,7 @@
 Csv csv = new CsvBuilder(5)
         .column("FIRST_NAME", new FirstNameSupplier())
         .column("LAST_NAME", new LastNameSupplier())
-        .column("CUSTOM", () -> String.valueOf(new Random().nextFloat()))
+        .column("CUSTOM", () -> new Random().nextFloat())
         .build();
 
 System.out.println(csv.toString());

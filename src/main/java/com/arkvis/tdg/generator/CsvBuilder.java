@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 
 public class CsvBuilder {
 
-    private Map<String, Supplier<String>> columnMap;
+    private Map<String, Supplier<?>> columnMap;
     private int rowCount;
     private Csv csv;
 
@@ -19,7 +19,7 @@ public class CsvBuilder {
         columnMap = new HashMap<>();
     }
 
-    public CsvBuilder column(String columnName, Supplier<String> supplier) {
+    public CsvBuilder column(String columnName, Supplier<?> supplier) {
         csv.addColumn(columnName);
         columnMap.put(columnName, supplier);
         return this;
@@ -38,6 +38,7 @@ public class CsvBuilder {
         return csv.getHeaders().stream()
                 .map(columnMap::get)
                 .map(Supplier::get)
+                .map(Object::toString)
                 .collect(Collectors.toList());
     }
 }
